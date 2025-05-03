@@ -1,6 +1,6 @@
 PSDK_DIR = os.getenv("PLUGIN_SDK_DIR")
 
-workspace "FLAAudioLoader"
+workspace "$Audio-LEAR-cars-com"
     configurations { 
         "Debug", 
         "Release" 
@@ -15,7 +15,7 @@ workspace "FLAAudioLoader"
     location "../build"
     targetdir "../build/bin"
 
-project "FLAAudioLoader"
+project "$Audio-LEAR-cars-com"
     kind "SharedLib"
     targetextension ".asi"
 
@@ -31,6 +31,9 @@ project "FLAAudioLoader"
         "GTASA",
         "RW"
     }
+
+    pchheader "pch.h"
+    pchsource "../src/pch.cpp"
 
     includedirs {
         "../include/",

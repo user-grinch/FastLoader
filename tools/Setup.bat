@@ -1,6 +1,6 @@
 @echo off
 set "projectdir=%CD%"
-set "PLUGIN_NAME="FLAAudioLoader""
+set "PLUGIN_NAME="$Audio-LEAR-cars-com""
 
 :find_vs_path
 set "vs_path="
