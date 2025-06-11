@@ -1,6 +1,6 @@
 PSDK_DIR = os.getenv("PLUGIN_SDK_DIR")
 
-workspace "$Audio-LEAR-cars-com"
+workspace "$fastloader"
     configurations { 
         "Debug", 
         "Release" 
@@ -15,7 +15,7 @@ workspace "$Audio-LEAR-cars-com"
     location "../build"
     targetdir "../build/bin"
 
-project "$Audio-LEAR-cars-com"
+project "$fastloader"
     kind "SharedLib"
     targetextension ".asi"
 

@@ -1,6 +1,6 @@
 @echo off
 set "projectdir=%CD%"
-set "PLUGIN_NAME="$Audio-LEAR-cars-com""
+set "PLUGIN_NAME="$fastloader""
 
 :find_vs_path
 set "vs_path="
