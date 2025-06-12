@@ -13,6 +13,7 @@ LearLoader::LearLoader(HINSTANCE pluginHandle)
     }
 
     ParseModloader();
+    FLAAudioLoader.Process();
 }
 
 bool LearLoader::IsPluginNameValid()

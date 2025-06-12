@@ -146,6 +146,11 @@ CCargrpLoader::CCargrpLoader()
             std::string str;
             while (std::getline(ss, str, ','))
             {
+                if (idxinGroup >= carsPerGroup)
+                {
+                    MessageBox(NULL, std::format("Limit exceeded for {}", grpName).c_str(), MODNAME, MB_OK);
+                    break;
+                }
                 str.erase(std::remove_if(str.begin(), str.end(), ::isspace),
                           str.end());
                 int model = NULL;
@@ -154,12 +159,6 @@ CCargrpLoader::CCargrpLoader()
                 {
                     *GetModel(idx, idxinGroup++) = model;
                     *GetCountInGroup(idx) = *GetCountInGroup(idx) + 1;
-                }
-
-                if (idxinGroup >= carsPerGroup)
-                {
-                    MessageBox(NULL, std::format("Limit exceeded for {}", grpName).c_str(), MODNAME, MB_OK);
-                    break;
                 }
             }
         }

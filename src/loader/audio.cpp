@@ -62,6 +62,10 @@ void CFLAAudioLoader::UpdateAudioFile()
     }
 }
 
+void CFLAAudioLoader::Process() {
+    UpdateAudioFile();
+}
+
 void CFLAAudioLoader::Parse(const std::string &line)
 {
     tVehicleAudioSetting setting;
