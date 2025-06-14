@@ -4,8 +4,6 @@
 
 🔁 Copy and Paste into modloader/, no file editing, fully automatic loading via folder detection.
 
----
-
 ## 🚘 What is FastLoader?
 
 **FastLoader** is a tiny `.asi` plugin that enhances GTA San Andreas modding by fixing what ModLoader doesn't:
@@ -13,8 +11,6 @@
 - Merges difficult files like `cargrp.dat`, `object.dat`, and `gtasa_vehicleAudioSettings.cfg`
 - Prevents crashes and manual merging
 - Ensures proper load order and compatibility with Fastman92 Limit Adjuster (FLA)
-
----
 
 ## 🧐 Key Features
 
@@ -24,13 +20,11 @@
 - 🚀 **Optimized for speed** – minimal startup overhead
 - 🛠️ **Compatible with ModLoader & FLA**
 
----
 
 ## 🛠️ It suits best
 
 - **Silent’s ASI Loader (2024 update)** – allows proper load order of `.asi` plugins  → [Download & info](https://gtaforums.com/topic/523982-relopensrc-silents-asi-loader/page/5/#findComment-1072560173)
 
----
 
 ## 📊 Installation
 
@@ -39,7 +33,6 @@
 3. Drop your `*.txt` config files into ModLoader (just like you normally do for ModLoader .txt files)
 4. Launch the game – done!
 
----
 
 ## ⚙️ How It Works
 
@@ -56,19 +49,16 @@ This ensures safe memory access and proper data injection, **without race condit
 
 📚 File format details are available in the project Wiki.
 
----
 
 ### 🗺️ Future File Support
 
 Support for more `.dat` and config files is planned – stay tuned for updates!
 
----
 
 ## 📄 License
 
 MIT License – free to use, share, or modify. If you use this in your modpack, please credit and link back to this repository.
 
----
 
 ## 🤝 Authors
 
