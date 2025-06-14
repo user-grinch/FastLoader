@@ -42,8 +42,7 @@ FastLoader is **guaranteed to run before other plugins**, including:
 - ✅ Fastman92 Limit Adjuster 
 
 This ensures safe memory access and proper data injection, **without race conditions or file conflicts**.
-
-> This behavior is made possible by the latest version of [Silent’s ASI Loader](https://gtaforums.com/topic/523982-relopensrc-silents-asi-loader/page/5/#findComment-1072560173),> which guarantees load order of `.asi` plugins.
+This behavior is made possible by the latest version of [Silent’s ASI Loader](https://gtaforums.com/topic/523982-relopensrc-silents-asi-loader/page/5/#findComment-1072560173), which guarantees load order of `.asi` plugins.
 
 🧹 Do **not** rename `$fastloader.asi`, and make sure it's placed in the main GTA SA directory to ensure it loads early.
 
