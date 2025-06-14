@@ -1,7 +1,5 @@
 # FastLoader
 
-⚡ A fast, lightweight text-based data loader that fixes the most troublesome file limitations in ModLoader and automates audio setup for Fastman92 Limit Adjuster (FLA).
-
 ## 🚘 What is FastLoader?
 
 **FastLoader** is a tiny `.asi` plugin that enhances GTA San Andreas modding by fixing what ModLoader doesn't:
