@@ -19,7 +19,7 @@
 
 ## 🛠️ It suits best
 
-- **Silent’s ASI Loader (2025 update)** – allows proper load order of `.asi` plugins  → [Download & info](https://gtaforums.com/topic/523982-relopensrc-silents-asi-loader/page/5/#findComment-1072560173)
+- **Silent’s ASI Loader (2025 update by fastman92)** – allows proper load order of `.asi` plugins  → [Download & info](https://gtaforums.com/topic/523982-relopensrc-silents-asi-loader/page/5/#findComment-1072560173)
 
 
 ## 📊 Installation
