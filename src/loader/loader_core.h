@@ -1,7 +1,7 @@
 #pragma once
 #include <wtypes.h>
 
-class LearLoader
+class FastLoader
 {
 private:
     HINSTANCE handle;
@@ -10,5 +10,5 @@ private:
     void ParseModloader();
 
 public:
-    LearLoader(HINSTANCE pluginHandle);
+    FastLoader(HINSTANCE pluginHandle);
 };

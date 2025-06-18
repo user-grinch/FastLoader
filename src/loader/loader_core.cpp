@@ -4,7 +4,7 @@
 #include "cargrp.h"
 #include "objdat.h"
 
-LearLoader::LearLoader(HINSTANCE pluginHandle)
+FastLoader::FastLoader(HINSTANCE pluginHandle)
 {
     handle = pluginHandle;
     if (!IsPluginNameValid())
@@ -16,7 +16,7 @@ LearLoader::LearLoader(HINSTANCE pluginHandle)
     FLAAudioLoader.Process();
 }
 
-bool LearLoader::IsPluginNameValid()
+bool FastLoader::IsPluginNameValid()
 {
     char buf[MAX_PATH];
     DWORD result = GetModuleFileName(handle, buf, MAX_PATH);
@@ -42,7 +42,7 @@ bool LearLoader::IsPluginNameValid()
     return true;
 }
 
-void LearLoader::ParseModloader()
+void FastLoader::ParseModloader()
 {
     for (auto &e : std::filesystem::recursive_directory_iterator(GAME_PATH((char *)"modloader")))
     {
@@ -54,6 +54,7 @@ void LearLoader::ParseModloader()
 
         std::string ext = e.path().extension().string();
         std::string path = e.path().string();
+        std::string fileName = e.path().filename().string();
         std::string parentPath = e.path().parent_path().string();
 
         // Ignore folders with '.' int their names .data / .profile etc
@@ -62,8 +63,23 @@ void LearLoader::ParseModloader()
             continue;
         }
 
+        if (fileName == "object.dat" || fileName == "cargrp.dat") {
+            // Intentionally static, ask only once
+            static int result = MessageBox(NULL, "Found object.dat or cargrp.dat in your modloader folder. Do you want to rename?", MODNAME, MB_YESNO | MB_ICONQUESTION);
+            if (result == IDYES) {
+                std::string newName = fileName + ".bak";
+                std::string newPath = parentPath + "\\" + newName;
+                try {
+                    std::filesystem::rename(path, newPath);
+                }
+                catch (const std::exception& e) {
+                    MessageBox(NULL, ("Failed to rename: " + std::string(e.what())).c_str(), MODNAME, MB_OK | MB_ICONERROR);
+                }
+            }
+        }
+
         // This could be any file but limiting it to txd and dat
-        if (ext == ".txt")
+        if (ext == ".txt" || ext == ".dat")
         {
             std::ifstream in(path);
             std::string line;

@@ -88,7 +88,7 @@ void CFLAAudioLoader::Parse(const std::string &line)
                        &setting.EngineVolumeOffset);
 
     // Check valid or not
-    if (count == 15)
+    if (count == 15 && strnlen(setting.Name, sizeof(setting.Name)) > 0)
     {
         store.push_back(line);
     }

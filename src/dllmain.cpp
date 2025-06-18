@@ -5,7 +5,7 @@ BOOL WINAPI DllMain(HINSTANCE hDllHandle, DWORD nReason, LPVOID Reserved)
 {
     if (nReason == DLL_PROCESS_ATTACH)
     {
-        LearLoader loader(hDllHandle);
+        FastLoader loader(hDllHandle);
     }
     return TRUE;
 }
