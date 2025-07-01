@@ -47,10 +47,15 @@ This behavior is made possible by the latest version of [Silent’s ASI Loader](
 
 ### 🗺️ Fastaman Limit Adjuster - Best Settings
 For cargrp.dat loading:
+
 `Cargrp cars per group = 63` 
+
 `Streaming_DesiredNumberOfVehiclesLoaded = 62` 
+
 For object.dat loading:
+
 `Object info entries = 200`
+
 For #VehicleStructs use Open Limit Adjuster default settings. 
 
 
