@@ -45,9 +45,13 @@ This behavior is made possible by the latest version of [Silent’s ASI Loader](
 📚 File format details are available in the project [Wiki](https://github.com/user-grinch/FastLoader/wiki)
 
 
-### 🗺️ Future File Support
-
-Support for more `.dat` and config files is planned – stay tuned for updates!
+### 🗺️ Fastaman Limit Adjuster - Best Settings
+For cargrp.dat loading:
+`Cargrp cars per group = 63` 
+`Streaming_DesiredNumberOfVehiclesLoaded = 62` 
+For object.dat loading:
+`Object info entries = 200`
+For #VehicleStructs use Open Limit Adjuster default settings. 
 
 
 ## 📄 License
