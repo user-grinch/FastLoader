@@ -41,7 +41,7 @@ FastLoader is **guaranteed to run before other plugins**, including:
 This ensures safe memory access and proper data injection, **without race conditions or file conflicts**.
 This behavior is made possible by the latest version of [Silent’s ASI Loader](https://gtaforums.com/topic/523982-relopensrc-silents-asi-loader/page/5/#findComment-1072560173), which guarantees load order of `.asi` plugins.
 
-🧹 Do **not** rename `$fastloader.asi`, and make sure it's placed in the main GTA SA directory to ensure it loads early.
+🧹Plugin must be named `$fastloader.asi`, and make sure it's placed in the main GTA SA directory to ensure it loads early.
 
 📚 File format details are available in the project [Wiki](https://github.com/user-grinch/FastLoader/wiki)
 
@@ -59,7 +59,16 @@ For object.dat loading:
 
 For #VehicleStructs use Open Limit Adjuster default settings. 
 
+### 🗺️ MixSets - Best Settings
 
+Comment out those lines with # to avoid conflicts and to grant a flawless stability.
+
+```
+#MinDesiredLoadedVeh  = 4        # (2) Minimum vehicle model variations loaded in memory.
+#NumDesiredLoadedVeh  = 36       # (22) How many desired vehicle model variations loaded into memory.
+#DelayLoadDesiredVeh  = 250      # (350) Delay time (in number of frames) to load a new vehicle model variation.
+#MinLoadedGangVeh     = 4        # (1) Minimum of gang vehicle models loaded in memory.
+```
 ## 📄 License
 
 MIT License – free to use, share, or modify. If you use this in your modpack, please credit and link back to this repository.
