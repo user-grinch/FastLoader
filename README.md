@@ -7,6 +7,7 @@
 - Merges difficult files like `cargrp.dat`, `object.dat`, and `gtasa_vehicleAudioSettings.cfg`
 - Prevents crashes and manual merging
 - Ensures proper load order and compatibility with Fastman92 Limit Adjuster (FLA)
+- Ignore folders with '.' as a prefix, preserving modloader functionality
 
 ## 🧐 Key Features
 
