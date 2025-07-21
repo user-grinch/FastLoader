@@ -27,7 +27,7 @@
 
 1. Download and install the newest [Silent’s ASI Loader](https://gtaforums.com/topic/523982-relopensrc-silents-asi-loader/page/5/#findComment-1072560173)
 2. Place `$fastloader.asi` in your main GTA SA directory (where `gta_sa.exe` is)
-3. Drop your `*.txt` config files into ModLoader (just like you normally do for ModLoader .txt files) Check the [Wiki](https://github.com/user-grinch/FastLoader/wiki)
+3. Drop regular text files with `*.fastloader` extension into ModLoader (just like you normally do for ModLoader .txt files) Check the [Wiki](https://github.com/user-grinch/FastLoader/wiki)
 4. Launch the game – done!
 
 
