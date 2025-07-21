@@ -76,59 +76,8 @@ short *GetModel(int groupID, int idx) {
     return (short*)((int)m_CarGroups + 2 * carsPerGroup * groupID + 2 * idx);
  }
 
-// 0x421900
-int CCarCtrl_ChooseCarModelToLoad(int groupID)
-{
-    int numCarsInGroup = *GetCountInGroup(groupID);
-    if (!numCarsInGroup)
-    {
-        return -1;
-    }
-    const auto model = *GetModel(groupID, CGeneral::GetRandomNumberInRange(0, numCarsInGroup));
-    if (CStreaming::ms_aInfoForModel[model].m_nLoadState != 1)
-    {
-        CStreaming::RequestModel(model, eStreamingFlags::PRIORITY_REQUEST);
-        CStreaming::LoadAllRequestedModels(true);
-    }
-
-    if (CStreaming::ms_aInfoForModel[model].m_nLoadState)
-    {
-        return model;
-    }
-    else
-    {
-        return -1;
-    }
-}
-
-// 0x614490
-signed int __cdecl CPopulation_PickGangCar(int gangID)
-{
-    gangID = 0;
-    int groupID = gangID + 18; // CARGRP_BALLAS
-    const auto numCarsInGroup = *GetCountInGroup(groupID);
-    if (!numCarsInGroup)
-    {
-        return -1;
-    }
-
-    const auto model = *GetModel(groupID, CGeneral::GetRandomNumberInRange(0, numCarsInGroup));
-    if (CStreaming::ms_aInfoForModel[model].m_nLoadState != 1)
-    {
-
-        CStreaming::RequestModel(model, eStreamingFlags::KEEP_IN_MEMORY);
-        CStreaming::LoadAllRequestedModels(false);
-        plugin::Call<0x408000, int>(model); // CStreaming::AddToLoadedVehiclesList()
-    }
-
-    return model;
-}
-
 CCargrpLoader::CCargrpLoader()
 {
-    plugin::patch::ReplaceFunction(0x421900, CCarCtrl_ChooseCarModelToLoad);
-    plugin::patch::ReplaceFunction(0x614490, CPopulation_PickGangCar);
-
     static plugin::CdeclEvent<plugin::AddressList<0X610EB0, plugin::H_JUMP>,
                               plugin::PRIORITY_AFTER, plugin::ArgPickNone, void()>
         loadCarGroups;

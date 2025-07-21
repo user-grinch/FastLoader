@@ -79,7 +79,7 @@ void FastLoader::ParseModloader()
         }
 
         // This could be any file but limiting it to txd and dat
-        if (ext == ".txt" || ext == ".dat")
+        if (ext == ".fastloader")
         {
             std::ifstream in(path);
             std::string line;
