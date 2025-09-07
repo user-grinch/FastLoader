@@ -86,7 +86,7 @@ cargrp.fastloader
 ```
 Thanks to that you have control what to load, but mods with pre prepared .fastloader files will be always loaded. (Like Project Props 3)
 
-⚠️ **Important:** Fastloader will only load files with the `.fastloader` extension. It will **ignore all others**.
+⚠️ **Important:** Fastloader will only load files with the `.fastloader` extension and only those which are implemented. It will **ignore all others**.
 
 
 ## 📄 License
