@@ -69,6 +69,26 @@ Comment out those lines with # to avoid conflicts and to grant a flawless stabil
 #DelayLoadDesiredVeh  = 250      # (350) Delay time (in number of frames) to load a new vehicle model variation.
 #MinLoadedGangVeh     = 4        # (1) Minimum of gang vehicle models loaded in memory.
 ```
+
+## ⚠️ Fastloader and `.dat` Files
+
+By default, **Fastloader** will ask whether to rename (disable) `cargrp.dat` and `object.dat` files:  
+<img width="406" height="147" alt="image" src="https://github.com/user-attachments/assets/8f0e74e7-a8a7-4221-92ec-69f5bb2e6163" />
+
+It will append `.bak` to the file name:  
+<img width="178" height="120" alt="image" src="https://github.com/user-attachments/assets/0eee36ad-a553-4e71-936c-d6bdafca4673" />
+
+If you want **Fastloader** to load one of these files afterwards (`object.dat` or `cargrp.dat`), simply change its extension to:
+
+```
+object.fastloader
+cargrp.fastloader
+```
+Thanks to that you have control what to load, but mods with pre prepared .fastloader files will be always loaded. (Like Project Props 3)
+
+⚠️ **Important:** Fastloader will only load files with the `.fastloader` extension. It will **ignore all others**.
+
+
 ## 📄 License
 
 MIT License – free to use, share, or modify. If you use this in your modpack, please credit and link back to this repository.
