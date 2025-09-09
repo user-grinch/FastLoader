@@ -10,8 +10,8 @@ CObjDatLoader ObjDatLoader;
 
 #define END_ID "*"
 
+static bool eof = false;
 char* __cdecl CObjDatLoader::hkLoadLine(FILE* file) {
-    static bool eof = false;
     static std::string line;
     
     if (!eof) {
@@ -31,6 +31,11 @@ char* __cdecl CObjDatLoader::hkLoadLine(FILE* file) {
     }
 
     return const_cast<char*>(line.c_str());
+}
+
+int __cdecl CObjDatLoader::hkSetDir(LPCSTR lpPathName) {
+    eof = false;
+    return CFileMgr::SetDir(lpPathName);
 }
 
 void CObjDatLoader::Parse(const std::string &line) {
@@ -74,4 +79,5 @@ void CObjDatLoader::Parse(const std::string &line) {
 CObjDatLoader::CObjDatLoader()
 {
     plugin::patch::ReplaceFunctionCall(0x5B5798, CObjDatLoader::hkLoadLine);
+    plugin::patch::ReplaceFunctionCall(0x5B5432, CObjDatLoader::hkSetDir);
 }

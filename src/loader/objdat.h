@@ -6,7 +6,8 @@ class CObjDatLoader
 {
 private:
     static inline std::queue<std::string> store;
-    static inline char *__cdecl hkLoadLine(FILE *file);
+    static char *__cdecl hkLoadLine(FILE *file);
+    static int __cdecl hkSetDir(LPCSTR lpPathName);
 
 public:
     CObjDatLoader();

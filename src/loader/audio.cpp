@@ -63,7 +63,9 @@ void CFLAAudioLoader::UpdateAudioFile()
 }
 
 void CFLAAudioLoader::Process() {
-    UpdateAudioFile();
+    if (!store.empty()) {
+        UpdateAudioFile();
+    }
 }
 
 void CFLAAudioLoader::Parse(const std::string &line)
