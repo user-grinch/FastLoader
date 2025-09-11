@@ -1,5 +1,10 @@
 # FastLoader – your best companion when adding new props or cars
 
+## 📖 Read Wiki
+[Loading cargrp.dat](https://github.com/user-grinch/FastLoader/wiki/1.-cargrp.dat)
+[Loading FLA Audio.dat](https://github.com/user-grinch/FastLoader/wiki/2.-gtasa_vehicleAudioSettings.cfg)
+[Loading Object.dat](https://github.com/user-grinch/FastLoader/wiki/3.-Objects.dat)
+
 ## 🚘 What is FastLoader?
 
 **FastLoader** is a tiny `.asi` plugin that enhances GTA San Andreas modding by fixing what ModLoader doesn't:
