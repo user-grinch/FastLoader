@@ -78,13 +78,12 @@ By default, **Fastloader** will ask whether to rename (disable) `cargrp.dat` and
 It will append `.bak` to the file name:  
 <img width="178" height="120" alt="image" src="https://github.com/user-attachments/assets/0eee36ad-a553-4e71-936c-d6bdafca4673" />
 
-If you want **Fastloader** to load one of these files afterwards (`object.dat` or `cargrp.dat`), simply change its extension to:
+**Why does this happen?**  
+Fastloader starts **before** Modloader. Its task is to add new entries to the original `object.dat` or `cargrp.dat` files stored in `/data`.  
+The purpose of Fastloader is to load lines for newly added objects into `object.dat` or to add newly added cars into `cargrp.dat`.  
 
-```
-object.fastloader
-cargrp.fastloader
-```
-Thanks to that you have control what to load, but mods with pre prepared .fastloader files will be always loaded. (Like Project Props 3)
+👉 If you just want to load an `object.dat` or `cargrp.dat` file, leave it in Modloader. Don’t use Fastloader for it.  
+👉 When adding new props (like *Project Props 3*) or cars with FLA, Fastloader is your friend.  
 
 ⚠️ **Important:** Fastloader will only load files with the `.fastloader` extension and only those which are implemented. It will **ignore all others**.
 
