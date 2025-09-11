@@ -94,10 +94,16 @@ void FastLoader::ParseModloader()
                     {
                         continue;
                     }
-
-                    CargrpLoader.Parse(line);
-                    ObjDatLoader.Parse(line);
-                    FLAAudioLoader.Parse(line);
+                    
+                    if (gConfig.ReadBoolean("MAIN", "CargrpLoader", true)) {
+                        CargrpLoader.Parse(line);
+                    }
+                    if (gConfig.ReadBoolean("MAIN", "ObjDatLoader", true)) {
+                        ObjDatLoader.Parse(line);
+                    }
+                     if (gConfig.ReadBoolean("MAIN", "FLAAudioLoader", true)) {
+                        FLAAudioLoader.Parse(line);
+                    }
                 }
                 in.close();
             }
