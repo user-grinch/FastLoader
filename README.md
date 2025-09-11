@@ -1,4 +1,4 @@
-# FastLoader
+# FastLoader – your best companion when adding new props or cars
 
 ## 🚘 What is FastLoader?
 
