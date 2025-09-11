@@ -86,6 +86,7 @@ It will append `.bak` to the file name:
 **Why does this happen?**  
 Fastloader starts **before** Modloader. Its task is to add new entries to the original `object.dat` or `cargrp.dat` files stored in `/data`.  
 The purpose of Fastloader is to load lines for newly added objects into `object.dat` or to add newly added cars into `cargrp.dat`.  
+When you have any object.dat or cargrp.dat inside modloader folder, modloader.asi will load this data again. It will cause the crashes. 
 
 👉 If you just want to load an `object.dat` or `cargrp.dat` file, leave it in Modloader. Don’t use Fastloader for it.  
 👉 When adding new props (like *Project Props 3*) or cars with FLA, Fastloader is your friend.  
