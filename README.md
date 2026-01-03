@@ -1,4 +1,7 @@
-# FastLoader – your best companion when adding new props or cars
+# ‼️DEPRECATED‼️
+
+## ➡️ Use [COMP.Injector](https://github.com/damianjurkiewicz/comp.injector/tree/main) instead
+
 
 ## 📖 Read Wiki
 - [Loading cargrp.dat](https://github.com/user-grinch/FastLoader/wiki/1.-cargrp.dat)
